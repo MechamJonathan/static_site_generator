@@ -2,7 +2,7 @@ from enum import Enum
 from itertools import takewhile 
 from htmlnode import HTMLNode, ParentNode
 from inline_markdown import text_to_textnodes
-from textnode import text_node_to_html_node, TextNode
+from textnode import text_node_to_html_node, TextNode, TextType
 
 class BlockType(Enum):
     PARAGRAPH = "paragraph"
@@ -128,8 +128,9 @@ def create_code_node(block):
     lines = block.splitlines()
     text = "\n".join(lines[1:-1])
     # Create the nested structure
-    code_node = HTMLNode(tag="code", value=None, children=[TextNode(text)])
-    return HTMLNode(tag="pre", value=None, children=[code_node])
+    children = text_to_children(text)
+    code = ParentNode("code", children)
+    return ParentNode("pre", [code])
 
 def create_unordered_list_node(block):
     list_of_nodes = []
