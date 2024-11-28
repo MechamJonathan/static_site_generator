@@ -168,6 +168,5 @@ this is paragraph text
             "<div><h1>this is an h1</h1><p>this is paragraph text</p><h2>this is an h2</h2></div>",
         )
 
-
 if __name__ == "__main__":
     unittest.main()

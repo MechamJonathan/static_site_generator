@@ -154,7 +154,5 @@ class TextToTextNodes(unittest.TestCase):
                     TextNode("link", TextType.LINK, "https://boot.dev"),
                 ])
 
-
-
 if __name__ == "__main__":
     unittest.main()

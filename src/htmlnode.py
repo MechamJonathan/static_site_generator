@@ -1,5 +1,4 @@
 
-
 class HTMLNode():
     def __init__(self, tag=None, value=None, children=None, props=None):
         self.tag = tag
@@ -28,7 +27,6 @@ class HTMLNode():
             self.children == other.children
         )
     
-    
 class LeafNode(HTMLNode):
     def __init__(self, tag=None, value=None, props=None):
         super().__init__(tag, value, None, props)
@@ -49,7 +47,6 @@ class LeafNode(HTMLNode):
             self.value == other.value and
             self.props == other.props
         )
-
 
 class ParentNode(HTMLNode):
     def __init__(self, tag, children, props=None):

@@ -1,6 +1,5 @@
 from enum import Enum
 from htmlnode import LeafNode
-#from inline_markdown import *
 
 class TextType(Enum):
     TEXT = "normal"

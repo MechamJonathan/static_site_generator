@@ -1,7 +1,6 @@
 import os
 import shutil
 
-
 def copy_files_recursive(source, destination):
     if not os.path.exists(destination):
         os.mkdir(destination)

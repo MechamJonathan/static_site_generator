@@ -3,7 +3,6 @@ import unittest
 from textnode import TextNode, TextType, text_node_to_html_node
 from htmlnode import LeafNode
 
-
 class TestTextNode(unittest.TestCase):
     def test_eq(self):
         node = TextNode("This is a text node", TextType.BOLD)
@@ -13,7 +12,6 @@ class TestTextNode(unittest.TestCase):
         self.assertEqual(node2.text_type, TextType.BOLD)
         self.assertEqual(node.url, None)
         self.assertEqual(node2.url, None)
-
 
 class TestTextNodeToHTMLNode(unittest.TestCase):
     def test_text_node_to_html_node(self):
@@ -44,8 +42,6 @@ class TestTextNodeToHTMLNode(unittest.TestCase):
         self.assertEqual(html_node.tag, "a")
         self.assertEqual(html_node.value, "Link text")
         self.assertEqual(html_node.props, {"href": "https://example.com"})
-
-    
 
 if __name__ == "__main__":
     unittest.main()

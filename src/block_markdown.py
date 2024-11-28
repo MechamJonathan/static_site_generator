@@ -2,7 +2,7 @@ from enum import Enum
 from itertools import takewhile 
 from htmlnode import HTMLNode, ParentNode
 from inline_markdown import text_to_textnodes
-from textnode import text_node_to_html_node, TextNode, TextType
+from textnode import text_node_to_html_node
 
 class BlockType(Enum):
     PARAGRAPH = "paragraph"
@@ -11,7 +11,6 @@ class BlockType(Enum):
     QUOTE = "quote"
     UNORDERED_LIST = "unordered list"
     ORDERED_LIST = "ordered list"
-
 
 def markdown_to_blocks(markdown):
     trimmed_markdown = markdown.split("\n\n")

@@ -4,8 +4,6 @@ from generate_content import *
 from textnode import *
 from block_markdown import *
 
-
-
 dir_path_static = "./static"
 dir_path_public = "./public"
 dir_path_content = "./content"
@@ -24,10 +22,6 @@ def main():
 
     print("Generating page...")
     generate_pages_recursive(dir_path_content, template_path, dir_path_public)
-
-    
-
-
 
 if __name__ == '__main__':
     main()
